@@ -1,0 +1,41 @@
+{
+  "_meta": {
+    "name": "bannerscan sample dataset",
+    "updated": "2026-11-17",
+    "note": "Small illustrative sample of well-known, publicly documented CVEs. Not exhaustive. Extend or replace with data derived from NVD (https://nvd.nist.gov/)."
+  },
+  "entries": [
+    {"cve": "CVE-2024-6387", "product": "openssh", "summary": "regreSSHion: signal-handler race condition in sshd (unauthenticated).",
+     "ranges": [{"introduced": "8.5", "fixed": "9.8"}, {"introduced": "0", "fixed": "4.4"}]},
+    {"cve": "CVE-2023-38408", "product": "openssh", "summary": "ssh-agent PKCS#11 provider search path issue.",
+     "ranges": [{"introduced": "0", "fixed": "9.3.2"}]},
+    {"cve": "CVE-2018-15473", "product": "openssh", "summary": "Username enumeration via authentication timing/behaviour.",
+     "ranges": [{"introduced": "0", "fixed": "7.8"}]},
+    {"cve": "CVE-2016-0777", "product": "openssh", "summary": "Client roaming feature information leak.",
+     "ranges": [{"introduced": "5.4", "fixed": "7.1.2"}]},
+    {"cve": "CVE-2016-7406", "product": "dropbear", "summary": "Format string vulnerability in logging code.",
+     "ranges": [{"introduced": "0", "fixed": "2016.74"}]},
+    {"cve": "CVE-2021-41773", "product": "apache_httpd", "summary": "Path traversal / file disclosure in 2.4.49.",
+     "ranges": [{"introduced": "2.4.49", "fixed": "2.4.50"}]},
+    {"cve": "CVE-2021-42013", "product": "apache_httpd", "summary": "Incomplete fix for CVE-2021-41773 (2.4.49-2.4.50).",
+     "ranges": [{"introduced": "2.4.49", "fixed": "2.4.51"}]},
+    {"cve": "CVE-2022-22720", "product": "apache_httpd", "summary": "HTTP request smuggling via improper connection closing.",
+     "ranges": [{"introduced": "2.4.0", "fixed": "2.4.53"}]},
+    {"cve": "CVE-2023-25690", "product": "apache_httpd", "summary": "HTTP request smuggling with mod_proxy rewrite rules.",
+     "ranges": [{"introduced": "2.4.0", "fixed": "2.4.56"}]},
+    {"cve": "CVE-2021-23017", "product": "nginx", "summary": "Off-by-one in DNS resolver.",
+     "ranges": [{"introduced": "0.6.18", "fixed": "1.20.1"}]},
+    {"cve": "CVE-2022-41741", "product": "nginx", "summary": "Memory corruption in ngx_http_mp4_module.",
+     "ranges": [{"introduced": "1.1.3", "fixed": "1.22.1"}, {"introduced": "1.23.0", "fixed": "1.23.2"}]},
+    {"cve": "CVE-2017-7269", "product": "iis", "summary": "WebDAV ScStoragePathFromUrl buffer overflow (IIS 6.0).",
+     "ranges": [{"introduced": "6.0", "fixed": "6.1"}]},
+    {"cve": "CVE-2011-2523", "product": "vsftpd", "summary": "Backdoor in a tampered 2.3.4 source tarball distributed in 2011.",
+     "ranges": [{"introduced": "2.3.4", "fixed": "2.3.5"}]},
+    {"cve": "CVE-2019-12815", "product": "proftpd", "summary": "mod_copy allows arbitrary file copy without authentication.",
+     "ranges": [{"introduced": "0", "fixed": "1.3.6"}]},
+    {"cve": "CVE-2019-10149", "product": "exim", "summary": "Remote command execution in deliver_message (4.87-4.91).",
+     "ranges": [{"introduced": "4.87", "fixed": "4.92"}]},
+    {"cve": "CVE-2019-15846", "product": "exim", "summary": "TLS SNI handling flaw allowing remote code execution.",
+     "ranges": [{"introduced": "0", "fixed": "4.92.2"}]}
+  ]
+}
