@@ -15,7 +15,7 @@
 
 ## Install & run
 ```bash
-git clone https://github.com/<your-username>/banner-vuln-awareness.git
+git clone https://github.com/chrisbaptist07/banner-vuln-awareness.git
 cd banner-vuln-awareness
 pip install -e .
 
