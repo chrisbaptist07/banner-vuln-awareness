@@ -3,7 +3,7 @@ import json
 from datetime import datetime, timezone
 from typing import List
 
-from . import DISCLAIMER, __version__
+from . import DISCLAIMER, TOOL_TITLE, __author__, __version__
 
 RULE = "=" * 78
 
@@ -11,6 +11,7 @@ RULE = "=" * 78
 def build(reports: List[dict], meta: dict) -> dict:
     return {
         "tool": f"bannerscan {__version__}",
+        "author": __author__,
         "generated_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "disclaimer": DISCLAIMER,
         "dataset": meta,
@@ -23,7 +24,7 @@ def render_json(doc: dict) -> str:
 
 
 def render_text(doc: dict, verbose: bool = False) -> str:
-    out = [RULE, "  AWARENESS ONLY - NOT EXPLOITATION", RULE, DISCLAIMER, ""]
+    out = [RULE, f"  {TOOL_TITLE}", f"  Author: {__author__}   |   v{__version__}", RULE, ""]
     meta = doc["dataset"]
     out.append(f"Dataset: {meta.get('name', 'unknown')} (updated {meta.get('updated', 'n/a')})")
     for host in doc["hosts"]:
@@ -54,9 +55,7 @@ def render_text(doc: dict, verbose: bool = False) -> str:
 
 
 def render_markdown(doc: dict) -> str:
-    out = ["# Banner Vulnerability Awareness Report", "",
-           f"> **AWARENESS ONLY - NOT EXPLOITATION.** {DISCLAIMER}", "",
-           f"_Generated {doc['generated_utc']} by {doc['tool']}_", ""]
+    out = [f"# {TOOL_TITLE}", "", f"_Author: {__author__} | Generated {doc['generated_utc']} | {doc['tool']}_", ""]
     for host in doc["hosts"]:
         out += [f"## {host['host']}", "", "| Port | Service | Version | Advisories |", "|---|---|---|---|"]
         for p in host["ports"]:
@@ -69,4 +68,5 @@ def render_markdown(doc: dict) -> str:
             cves = ", ".join(a["cve"] for a in p["advisories"]) or "none in dataset"
             out.append(f"| {p['port']} | {svc['display']} | {svc['version']} | {cves} |")
         out.append("")
+    out += ["---", f"_{DISCLAIMER}_"]
     return "\n".join(out)

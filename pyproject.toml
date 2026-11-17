@@ -7,6 +7,7 @@ name = "bannerscan"
 version = "1.0.0"
 description = "Banner-grabbing vulnerability awareness scanner (awareness only, not exploitation)"
 readme = "README.md"
+authors = [{ name = "Chris Jossy Baptist" }]
 requires-python = ">=3.8"
 license = { text = "MIT" }
 dependencies = []

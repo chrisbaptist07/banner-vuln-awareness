@@ -11,7 +11,7 @@ from .report import build, render_json, render_markdown, render_text
 def build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(
         prog="bannerscan",
-        description="Banner-grabbing vulnerability AWARENESS scanner. Awareness only, not exploitation.",
+        description="bannerscan - banner-grabbing vulnerability awareness scanner. By Chris Jossy Baptist. Awareness only, not exploitation.",
         epilog="Only scan systems you own or have explicit written permission to test.",
     )
     p.add_argument("targets", nargs="+", help="hostname(s) or IP(s) to scan")

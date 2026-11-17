@@ -1,5 +1,7 @@
 # bannerscan: Banner-Grabbing Vulnerability Awareness Scanner
 
+**Author:** Chris Jossy Baptist
+
 > **AWARENESS ONLY - NOT EXPLOITATION.**
 > bannerscan reads the version banners that services voluntarily advertise and compares them with a local, offline CVE dataset to flag *potentially* outdated software. It contains no exploit code, performs no authentication attempts, and never tries to trigger a vulnerability.
 
@@ -25,7 +27,8 @@ python -m bannerscan 10.0.0.5 -f json --authorized     # without installing
 ## Example output
 ```
 ==============================================================================
-  AWARENESS ONLY - NOT EXPLOITATION
+  bannerscan - Banner Vulnerability Awareness Scanner
+  Author: Chris Jossy Baptist   |   v1.0.0
 ==============================================================================
 Host: 192.168.1.10
     22/tcp  open  OpenSSH 7.4  ->  POTENTIALLY OUTDATED (3 advisory match(es))

@@ -3,6 +3,8 @@
 AWARENESS ONLY, NOT EXPLOITATION.
 """
 __version__ = "1.0.0"
+__author__ = "Chris Jossy Baptist"
+TOOL_TITLE = "bannerscan - Banner Vulnerability Awareness Scanner"
 
 DISCLAIMER = (
     "AWARENESS ONLY - NOT EXPLOITATION. Findings are based solely on version "
